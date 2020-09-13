@@ -3,7 +3,9 @@ import React from 'react';
 export default function Header() {
 
   return (
-    <p>{`NAVIGATION`}</p>
+    <div className="app-header">
+      <p>{`NAVIGATION`}</p>
+    </div>
   )
 
 }
