@@ -1,16 +1,13 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header.jsx';
+import React from 'react'
+import './App.css'
+import Header from './components/Header.jsx'
+import Main from './components/Main.jsx'
 
-function App() {
+export default function App() {
   return (
     <div className="app">
-    <Header className="app-header"></Header>
-      <main className="app-main">
-        <p>MAIN</p>
-      </main>
+      <Header></Header>
+      <Main></Main>
     </div>
-  );
+  )
 }
-
-export default App;
