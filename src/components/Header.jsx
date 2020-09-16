@@ -6,8 +6,11 @@ import HeaderTitle from './HeaderTitle.jsx'
 export default function Header(props) {
 
   return (
-    <div className="app-header">
-      <MenuButton toggleMenu={props.toggleMenu}></MenuButton>
+    <div className='app-header'>
+      <MenuButton
+        toggleMenu={props.toggleMenu}
+        menuActive={props.menuActive}>
+      </MenuButton>
       <HeaderTitle></HeaderTitle>
       <SocialMediaContainer></SocialMediaContainer>
     </div>
