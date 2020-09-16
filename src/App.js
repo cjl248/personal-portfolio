@@ -7,17 +7,26 @@ export default class App extends React.Component {
 
   state = {
     menuActive: false,
+    pages: ['resume', 'projects', 'experience']
   }
 
   toggleMenu = (active) => {
-    console.log(active)
+    this.setState({
+      menuActive: !active,
+    })
   }
 
   render() {
     return (
-      <div className="app">
-        <Header toggleMenu={this.toggleMenu}></Header>
-        <Main menuActive={this.state.menuActive}></Main>
+      <div className='app'>
+        <Header
+          toggleMenu={this.toggleMenu}
+          menuActive={this.state.menuActive}>
+        </Header>
+        <Main
+          menuActive={this.state.menuActive}
+          pages={this.state.pages}>
+        </Main>
       </div>
     )
   }

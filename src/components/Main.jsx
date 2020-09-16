@@ -1,15 +1,16 @@
 import React from 'react'
+import MenuDrawerContainer from "../containers/MenuDrawerContainer.jsx"
 
 export default function Main(props) {
 
-  const renderMenuDrawer = () => {
-    console.log(props.menuActive)
-  }
-
+  console.log('menuActive from Main.jsx', props.menuActive)
   return (
-    <div className="app-main">
-      <div>{renderMenuDrawer()}</div>
-      <p>{`MAIN`}</p>
+    <div className='app-main'>
+      <MenuDrawerContainer
+        menuActive={props.menuActive}
+        pages={props.pages}>
+      </MenuDrawerContainer>
+      <div className='app-detail'>{`MAIN`}</div>
     </div>
   )
 
