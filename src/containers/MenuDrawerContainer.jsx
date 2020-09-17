@@ -15,7 +15,9 @@ export default function MenuDrawerContainer(props) {
 
   return (
     <div className={drawerClass()}>
-      {renderMenuOptions()}
+      <div className='drawer-options-container'>
+        {renderMenuOptions()}
+      </div>
     </div>
   )
 
