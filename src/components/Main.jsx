@@ -9,9 +9,12 @@ export default function Main(props) {
     <div className='app-main'>
       <MenuDrawerContainer
         menuActive={props.menuActive}
+        setActivePage={props.setActivePage}
         pages={props.pages}>
       </MenuDrawerContainer>
-      <DetailContainer activePage={props.activePage}></DetailContainer>
+      <DetailContainer
+        activePage={props.activePage}>
+      </DetailContainer>
     </div>
   )
 

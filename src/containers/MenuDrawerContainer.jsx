@@ -12,7 +12,8 @@ export default function MenuDrawerContainer(props) {
       return (
         <MenuDrawerOption
           key={index}
-          page={page}>
+          page={page}
+          setActivePage={props.setActivePage}>
         </MenuDrawerOption>)
     })
   }

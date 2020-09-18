@@ -18,7 +18,10 @@ export default class App extends React.Component {
   }
 
   setActivePage = (page) => {
-    console.log(page)
+    this.setState({
+      activePage: page,
+      menuActive: false,
+    })
   }
 
   render() {
@@ -31,6 +34,7 @@ export default class App extends React.Component {
         <Main
           menuActive={this.state.menuActive}
           pages={this.state.pages}
+          setActivePage={this.setActivePage}
           activePage={this.state.activePage}>
         </Main>
       </div>
