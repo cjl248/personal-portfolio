@@ -8,13 +8,17 @@ export default class App extends React.Component {
   state = {
     menuActive: false,
     pages: ['resume', 'projects', 'experience', 'about'],
-    activePage: null,
+    activePage: 'about',
   }
 
   toggleMenu = (active) => {
     this.setState({
       menuActive: !active,
     })
+  }
+
+  setActivePage = (page) => {
+    console.log(page)
   }
 
   render() {
@@ -26,7 +30,8 @@ export default class App extends React.Component {
         </Header>
         <Main
           menuActive={this.state.menuActive}
-          pages={this.state.pages}>
+          pages={this.state.pages}
+          activePage={this.state.activePage}>
         </Main>
       </div>
     )
