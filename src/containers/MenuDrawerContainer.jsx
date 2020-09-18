@@ -8,8 +8,12 @@ export default function MenuDrawerContainer(props) {
   }
 
   const renderMenuOptions = () => {
-    return props.pages.map((page) => {
-      return (<MenuDrawerOption page={page}></MenuDrawerOption>)
+    return props.pages.map((page, index) => {
+      return (
+        <MenuDrawerOption
+          key={index}
+          page={page}>
+        </MenuDrawerOption>)
     })
   }
 
