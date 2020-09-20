@@ -15,7 +15,7 @@ export default function DetailContainer(props) {
 
   return (
     <div className='detail-container'>
-      <span>{detailComponents[props.activePage]}</span>
+      {detailComponents[props.activePage]}
     </div>
   )
 

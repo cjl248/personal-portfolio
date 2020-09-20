@@ -13,8 +13,8 @@ export default class MenuButton extends React.Component {
         <HamburgerMenu
           isOpen={this.props.menuActive}
   	      menuClicked={this.handleMenuButtonClick}
-  	      width={36}
-  	      height={30}
+  	      width={32.4}
+  	      height={27}
           rotate={0}
           strokeWidth={4}
   	      color='#E2E8DD'
