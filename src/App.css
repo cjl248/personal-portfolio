@@ -2,18 +2,20 @@
   font-size: calc(10px + 2vmin);
   color: #E2E8DD;
   min-width: 750px;
+  font-family: 'Roboto Slab', sans-serif;
+
 }
 
 .app-header {
   background-color: #3D8071;
   position: sticky;
   top: 0;
-  height: 5rem;
+  height: 5.5rem;
   padding: 0 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   /* min-width: 650px; */
 }
 
@@ -52,7 +54,7 @@
 
 .app-main {
   background-color: #204039;
-  height: 90rem;
+  height: 85rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -64,8 +66,8 @@
   flex: 0 1 13rem;
   position: sticky;
   left: 0;
-  top: 5rem;
-  height: calc(100vh - 5rem);
+  top: 5.5rem;
+  height: calc(100vh - 5.8rem);
   background-color: #9ECCC1;
   z-index: 1;
 }
@@ -101,7 +103,7 @@
 
 .option-icon {
   display: inline;
-  /* padding-top: 3px; */
+  padding-top: 2px;
 }
 
 .option-text {
@@ -117,6 +119,8 @@
   flex-direction: column;
   align-items: center;
 }
+
+/* RESUME */
 
 .resume-page-container {
   height: inherit;
@@ -165,4 +169,26 @@
 
 .download-icon {
   display: inline;
+}
+
+/* PROJECTS */
+
+.projects-page-container {
+  height: inherit;
+  width: max(calc(100% - 13rem), 100%);
+  padding: 5px 5px 0px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-header-container {
+
+}
+
+.projects-demo-container {
+  height: 500px;
+  width: 950px;
+  border: 5px solid #3D8071;
+  background: #E2E8DD;
 }
