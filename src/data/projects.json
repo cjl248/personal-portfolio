@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Calabria Pizza",
+    "active": false,
+    "tech": "JavaScript, React, Ruby, Rails, bcrypt, JWT, Custom Sass",
+    "description": [
+      "Redesigned a fullstack SPA with fullstack auth and admin dashboard according to client feature specifications"
+    ]
+  },
+  {
+    "name": "Clarity",
+    "active": true,
+    "tech": "React, Rails API, PostgreSQL, Material-UI Fullstack Auth using bcrypt and JWT",
+    "description": [
+      "Integrated functional Material-UI React components and hooks to create a responsive lightweight UX\/UI",
+      "Levered 3 external APIs including the YouTube API to supply immersive, highly customizable content"
+    ]
+  },
+  {
+    "name": "BedFellows",
+    "active": false,
+    "tech": "React, Rails API, PostgreSQL, Semantic UI, Fullstack Auth using bcrypt and JWT",
+    "description": [
+      "Designed reusable React components and integrated Semantic UI styling with React Router for scalability",
+      "Implemented inversion of control principles in React component hierarchy to reverse data flow, update state, and trigger optimistic re-rendering for an engaging user experience"
+     ]
+  },
+  {
+    "name": "Catstagram",
+    "active": false,
+    "tech": "JavaScript-ES6, JSON, AJAX, Rails API, PostgreSQL",
+    "description": [
+      "Developed a RESTful Rails API and serialized JSON from a PostgreSQL database to respond to frontend Fetch API requests",
+      "Implemented delegation to apply event bubbling and allow for dynamic DOM manipulation in response to user interaction"
+    ]
+  }
+]

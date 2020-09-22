@@ -1,7 +1,7 @@
 .app {
   font-size: calc(10px + 2vmin);
   color: #E2E8DD;
-  min-width: 750px;
+  min-width: 1000px;
   font-family: 'Roboto Slab', sans-serif;
 
 }
@@ -57,13 +57,13 @@
   height: 85rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   /* min-width: 650px; */
 }
 
 .menu-drawer-container-active {
-  flex: 0 1 13rem;
+  flex: 0 1 15%;
   position: sticky;
   left: 0;
   top: 5.5rem;
@@ -114,7 +114,7 @@
 .detail-container {
   height: inherit;
   padding: 5px 5px 0px 5px;
-  flex: 0 1 max(calc(110% - 13rem), 110%);
+  flex: 0 1 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,7 +124,7 @@
 
 .resume-page-container {
   height: inherit;
-  width: max(calc(100% - 13rem), 100%);
+  width: inherit;
   padding: 5px 5px 0px 5px;
   display: flex;
   flex-direction: column;
@@ -175,20 +175,65 @@
 
 .projects-page-container {
   height: inherit;
-  width: max(calc(100% - 13rem), 100%);
+  width: inherit;
   padding: 5px 5px 0px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  > span, section {
+    padding: 10px 0;
+  }
 }
 
 .projects-header-container {
-
+  width: 850px;
+  display: flex;
+  margin: 10px 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  > span {
+    width: auto;
+    margin: 0 10px;
+    padding: 5px 15px;
+    border-radius: 25px;
+    // background-color: rgba(61, 128, 113, 0.6);
+    cursor: pointer;
+    &:hover {
+      // background-color:rgba(61, 128, 113, 1);
+      // color: #E2E8DD;
+    }
+  }
 }
 
-.projects-demo-container {
+.active-project-option {
+  color:rgba(61, 128, 113, 1);
+  background-color: #E2E8DD;
+  font-weight: 700;
+}
+
+.inactive-project-option {
+  background-color: rgba(61, 128, 113, 0.6);
+  &:hover {
+    background-color:rgba(61, 128, 113, 1);
+    color: #E2E8DD;
+  }
+}
+
+.projects-summary-container {
+  margin: 10px 0;
+  width: 700px;
+  text-align: left;
+  div {
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+
+.projects-video-container {
   height: 500px;
-  width: 950px;
+  width: 900px;
   border: 5px solid #3D8071;
   background: #E2E8DD;
 }
