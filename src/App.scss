@@ -21,6 +21,9 @@
 
 .menu-button {
   flex: 0 1 10%;
+  > * {
+    cursor: pointer;
+  }
 }
 
 .header-title{
@@ -36,7 +39,7 @@
 }
 
 .title-sub {
-  font-size: calc(10px + 2vmin);
+  // font-size: calc(10px + 2vmin);
   font-weight: 500;
 }
 
@@ -94,7 +97,6 @@
   flex-direction: row;
 }
 
-/* get inspired style from twitter menu */
 .menu-drawer-option:hover {
   background-color:rgba(61, 128, 113, .8);
   color: #E2E8DD;
@@ -222,12 +224,20 @@
 }
 
 .projects-summary-container {
+  align-self: flex-start;
   margin: 10px 0;
-  width: 700px;
+  width: 600px;
   text-align: left;
-  div {
-    font-size: 36px;
+  line-height: 1.2;
+  .summary-title {
+    font-size: calc(10px + 3.5vmin);
     font-weight: 700;
+  }
+  .summary-tech {
+    font-size: calc(10px + 2vmin);
+  }
+  .summary-bullets {
+    font-size: calc(10px + 2vmin);
   }
 }
 
