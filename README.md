@@ -1,5 +1,5 @@
 <h1>Personal Portfolio Web App</h1>
-<h2>Created by Chris Liendo with JS ES6, React and Native CSS/Sass</h2>
+<h2>Created by Chris Liendo with JS ES6, React and Custom CSS/Sass</h2>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
