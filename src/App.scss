@@ -223,10 +223,17 @@
   }
 }
 
+.summary-demo-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .projects-summary-container {
-  align-self: flex-start;
+  align-self: center;
   margin: 10px 0;
-  width: 600px;
+  width: 800px;
+  // height: 250px;
+  // overflow-y: scroll;
   text-align: left;
   line-height: 1.2;
   .summary-title {
@@ -243,7 +250,17 @@
 
 .projects-video-container {
   height: 500px;
-  width: 900px;
+  width: 900px; 
   border: 5px solid #3D8071;
   background: #E2E8DD;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .video-player {
+    width: inherit;
+    height: inherit;
+
+  }
 }

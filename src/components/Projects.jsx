@@ -30,10 +30,12 @@ export default class Projects extends React.Component {
           activeProject={this.state.activeProject}
           setActiveProject={this.setActiveProject}>
         </ProjectsHeader>
+        <section className='summary-demo-container'>
         <ProjectsSummary
           activeProject={this.state.activeProject}>
         </ProjectsSummary>
         <ProjectsDemo></ProjectsDemo>
+        </section>
       </div>
     )
   }
