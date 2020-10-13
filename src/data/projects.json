@@ -5,7 +5,7 @@
     "description": [
       "Redesigned a fullstack SPA with fullstack auth and admin dashboard according to client feature specifications"
     ],
-    "videos": []
+    "video": ""
   },
   {
     "name": "Clarity",
@@ -14,7 +14,7 @@
       "Integrated functional Material-UI React components and hooks to create a responsive lightweight UX\/UI",
       "Levered 3 external APIs including the YouTube API to supply immersive, highly customizable content"
     ],
-    "videos": []
+    "video": "https:\/\/player.vimeo.com\/video\/425576035"
   },
   {
     "name": "BedFellows",
@@ -23,7 +23,7 @@
       "Designed reusable React components and integrated Semantic UI styling with React Router for scalability",
       "Implemented inversion of control principles in React component hierarchy to reverse data flow, update state, and trigger optimistic re-rendering for an engaging user experience"
     ],
-    "videos": []
+    "video": ""
   },
   {
     "name": "Catstagram",
@@ -32,6 +32,6 @@
       "Developed a RESTful Rails API and serialized JSON from a PostgreSQL database to respond tos frontend Fetch API requests",
       "Implemented delegation to apply event bubbling and allow for dynamic DOM manipulation in response to user interaction"
     ],
-    "videos": []
+    "video": ""
   }
 ]

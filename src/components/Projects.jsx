@@ -9,15 +9,15 @@ export default class Projects extends React.Component {
     activeProject: this.props.projectList[0],
   }
 
-  setActiveProject = (project) => {
-    this.setState({
-      activeProject: project
-    })
-  }
-
   findActive = () => {
     return this.props.projectList.find(project => {
       return project.active
+    })
+  }
+
+  setActiveProject = project => {
+    this.setState({
+      activeProject: project
     })
   }
 
@@ -31,10 +31,12 @@ export default class Projects extends React.Component {
           setActiveProject={this.setActiveProject}>
         </ProjectsHeader>
         <section className='summary-demo-container'>
-        <ProjectsSummary
-          activeProject={this.state.activeProject}>
-        </ProjectsSummary>
-        <ProjectsDemo></ProjectsDemo>
+          <ProjectsSummary
+            activeProject={this.state.activeProject}>
+          </ProjectsSummary>
+          <ProjectsDemo
+            video={this.state.activeProject.video}>
+          </ProjectsDemo>
         </section>
       </div>
     )

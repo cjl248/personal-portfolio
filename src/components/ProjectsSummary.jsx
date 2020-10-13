@@ -10,16 +10,13 @@ export default function ProjectsSummary(props) {
 
   return(
     <div className='projects-summary-container'>
-      <div
-        className='summary-title'>
+      <div className='summary-title'>
         {props.activeProject.name}
       </div>
-      <div
-        className='summary-tech'>
+      <div className='summary-tech'>
         {`Tech Stack: ${props.activeProject.tech}`}
       </div>
-      <ul
-        className='summary-bullets'>
+      <ul className='summary-bullets'>
         {renderBullets()}
       </ul>
     </div>
