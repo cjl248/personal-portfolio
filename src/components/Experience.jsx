@@ -1,4 +1,5 @@
 import React from 'react'
+import ExperienceGroup from './ExperienceGroup.jsx'
 
 export default function Experience() {
   return(
@@ -9,6 +10,7 @@ export default function Experience() {
       <section className='experience-main'>
         <span>{`Axelon Services, New York, NY`}</span>
         <span>{`Tutors on Wheels, Astoria, NY`}</span>
+        <ExperienceGroup></ExperienceGroup>
       </section>
     </div>
   )
