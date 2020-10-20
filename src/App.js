@@ -8,7 +8,7 @@ export default class App extends React.Component {
   state = {
     menuActive: false,
     pages: ['resume', 'projects', 'experience', 'about'],
-    activePage: 'projects',
+    activePage: 'experience',
   }
 
   toggleMenu = (active) => {
