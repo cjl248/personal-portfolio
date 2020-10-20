@@ -5,7 +5,11 @@
     "description": [
       "Redesigned a fullstack SPA with fullstack auth and admin dashboard according to client feature specifications"
     ],
-    "video": ""
+    "links": {
+      "frontend": "",
+      "backend": "",
+      "video": ""
+    }
   },
   {
     "name": "Clarity",
@@ -14,7 +18,11 @@
       "Integrated functional Material-UI React components and hooks to create a responsive lightweight UX\/UI",
       "Levered 3 external APIs including the YouTube API to supply immersive, highly customizable content"
     ],
-    "video": "https:\/\/player.vimeo.com\/video\/425576035"
+    "links": {
+      "frontend": "", 
+      "backend": "",
+      "video": "https:\/\/player.vimeo.com\/video\/425576035"
+    }
   },
   {
     "name": "BedFellows",
