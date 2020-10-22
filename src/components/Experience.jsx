@@ -38,7 +38,7 @@ export default function Experience() {
       position: 'Tutor (SAT, SHSAT)',
       start: 'Jan 2016',
       end: 'May 2016',
-      experience: ''
+      experience: null
     }
   ]
 
