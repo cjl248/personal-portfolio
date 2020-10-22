@@ -21,25 +21,33 @@ export default class ExperienceGroup extends React.Component {
     })
   }
 
-  toggleBulletStyling = () => this.state.bulletsActive ? 'exp-bullets-active': 'exp-bullets-inactive'
+  toggleBulletStyling = () => {
+    return this.state.bulletsActive ? 'exp-bullets-active': 'exp-bullets-inactive'
+  }
+
+  toggleBlockStyling = () => {
+    return  this.state.bulletsActive ? 'hover-block active-hover-block' : 'hover-block'
+  }
 
   render () {
-    // console.log(this.props.experience);
     const {name, position, start, end, experience} = this.props.experience
     return (
-      <div
-        className='exp-project-group'
-        onClick={this.toggleExperience}>
-          <section className ='exp-line-1'>
-            <span>{name}</span>
-            <span>{`${start} - ${end}`}</span>
-          </section>
-          <section className ='exp-line-2'>
-            {position}
-          </section>
-          <section className ={this.toggleBulletStyling()}>
-            <ul>{this.renderExperience()}</ul>
-          </section>
+      <div className='hover-wrapper'>
+        <div className={this.toggleBlockStyling()}></div>
+        <div
+          className='exp-project-group'
+          onClick={this.toggleExperience}>
+            <section className ='exp-line-1'>
+              <span>{name}</span>
+              <span>{`${start} - ${end}`}</span>
+            </section>
+            <section className ='exp-line-2'>
+              {position}
+            </section>
+            <section className ={this.toggleBulletStyling()}>
+              <ul>{this.renderExperience()}</ul>
+            </section>
+        </div>
       </div>
     )
   }

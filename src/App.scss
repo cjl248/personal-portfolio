@@ -1,3 +1,8 @@
+$cream: #E2E8DD;
+$light-green: #9DCCC0;
+$green: #3D8071;
+$dark-green: #204039;
+
 .app {
   font-size: calc(10px + 2vmin);
   color: #E2E8DD;
@@ -80,7 +85,7 @@
 }
 
 .drawer-options-container {
-  padding: 10px;
+  padding: 10px 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -88,6 +93,7 @@
 
 .menu-drawer-option {
   color: #204039;
+  font-size: calc(10px + 1vmin);
   font-weight: 500;
   margin: 10px 2px;
   padding: 10px 15px;
@@ -99,18 +105,19 @@
     background-color:rgba(61, 128, 113, .8);
     color: #E2E8DD;
     cursor: pointer;
-    box-shadow: 0 0 10px 7.5px #E2E8DD;
+    box-shadow: 0 0 5px 5px #E2E8DD;
   }
 }
 
 .option-icon {
   display: inline;
-  padding-top: 2px;
+  padding-top: 0px;
 }
 
 .option-text {
   display: inline;
-  padding-left: 10px;
+  padding-left: 15px;
+  align-self: center;
 }
 
 .detail-container {
@@ -123,7 +130,7 @@
   align-items: center;
 }
 
-// RESUME //
+// RESUME PAGE //
 
 .resume-page-container {
   height: inherit;
@@ -174,7 +181,7 @@
   display: inline;
 }
 
-// PROJECTS //
+// PROJECTS PAGE //
 
 .projects-page-container {
   height: inherit;
@@ -261,7 +268,7 @@
   }
 }
 
-// EXPERIENCE //
+// EXPERIENCE PAGE //
 
 .experience-container  {
   height: inherit;
@@ -274,7 +281,7 @@
 }
 
 .experience-header {
-  padding: 5px 5px 50px 5px;
+  padding: 30px 5px 30px 5px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -287,13 +294,44 @@
   align-items: flex-start;
 }
 
+.hover-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &:hover {
+    > .hover-block {
+      height: 75px;
+      box-shadow: 0 0 10px 7.5px $green;
+    }
+    color: #E2E8DD;
+    -webkit-animation: slide-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	  animation: slide-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  &:not(:hover) {
+    -webkit-animation: slide-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	  animation: slide-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+}
+
+.active-hover-block {
+  &:not(:hover) {
+    height: 200px!important;
+  }
+  box-shadow: 0 0 10px 7.5px $green;
+}
+
+.hover-block {
+  height: 30px;
+  width: 3px;
+  background-color: #E2E8DD;
+}
+
 .exp-project-group {
-  width: 75vw;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   padding: 30px 5px 30px 50px;
   margin: 10px;
-  border-left: solid white 2px;
 }
 
 .exp-line-1 {
@@ -304,8 +342,61 @@
 }
 
 .exp-bullets-active {
+  font-size: calc(10px + 1.5vmin)
+
 }
 
 .exp-bullets-inactive {
   display: none;
+}
+
+
+//                             //
+// --------------------------- //
+//          KEYFRAMES          //
+// --------------------------- //
+//                             //
+
+// EXPERIENCE PAGE //
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }
