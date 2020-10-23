@@ -11,7 +11,7 @@ export default function Main(props) {
         menuActive={props.menuActive}
         setActivePage={props.setActivePage}
         pages={props.pages}>
-      </MenuDrawerContainer>
+      </MenuDrawerContainer> 
       <DetailContainer
         activePage={props.activePage}>
       </DetailContainer>

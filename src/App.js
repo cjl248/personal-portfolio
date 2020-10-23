@@ -6,9 +6,9 @@ import Main from './components/Main.jsx'
 export default class App extends React.Component {
 
   state = {
-    menuActive: false,
+    menuActive: true,
     pages: ['resume', 'projects', 'experience', 'about'],
-    activePage: 'experience',
+    activePage: 'projects',
   }
 
   toggleMenu = (active) => {
@@ -21,6 +21,8 @@ export default class App extends React.Component {
     this.setState({
       activePage: page,
       menuActive: false,
+    }, () => {
+      window.scroll(0,0)
     })
   }
 
