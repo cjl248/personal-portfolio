@@ -34,17 +34,16 @@ export default function Resume() {
     <div className='resume-page-container'>
       <section className='resume-header'>
         <span>{`Chris Liendo`}</span>
-        <span>{`Flushing, NY 11354`}</span>
         <span>{`Email: cjl248@cornell.edu | Phone: 646-338-0622 `}</span>
         <div className='resume-download-wrapper'>
+          <IconContext.Provider value={contextValue}>
+            <MdGetApp></MdGetApp>
+          </IconContext.Provider>
           <span
             className='download-text'
             onClick={handleDownloadClick}>
-            {`Download: `}
           </span>
-          <IconContext.Provider value={contextValue}>
-              <MdGetApp></MdGetApp>
-          </IconContext.Provider>
+            {`Download`}
         </div>
       </section>
       <section className='resume-doc'>
