@@ -2,6 +2,7 @@ import React from 'react'
 import './App.scss'
 import Header from './components/Header.jsx'
 import Main from './components/Main.jsx'
+import MenuDrawerContainer from './containers/MenuDrawerContainer.jsx'
 
 export default class App extends React.Component {
 
@@ -33,6 +34,11 @@ export default class App extends React.Component {
           toggleMenu={this.toggleMenu}
           menuActive={this.state.menuActive}>
         </Header>
+        <MenuDrawerContainer
+          menuActive={this.state.menuActive}
+          pages={this.state.pages}
+          setActivePage={this.setActivePage}>
+        </MenuDrawerContainer>
         <Main
           menuActive={this.state.menuActive}
           pages={this.state.pages}

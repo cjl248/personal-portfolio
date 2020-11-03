@@ -2,6 +2,8 @@ $cream: #E2E8DD;
 $light-green: #9DCCC0;
 $green: #3D8071;
 $dark-green: #204039;
+$nice-blue: #1e5e71;
+$nice-blue2: #2c7186;
 
 .app {
   font-size: calc(10px + 2vmin);
@@ -61,7 +63,8 @@ $dark-green: #204039;
 }
 
 .app-main {
-  background-color: #204039;
+  // background-color: #204039;
+  background-color: $dark-green;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -76,38 +79,55 @@ $dark-green: #204039;
   left: 0;
   top: 5.5rem;
   height: auto;
+  max-height: 100px;
   width: auto;
-  background-color: $light-green;
+  background-color: rgb(40, 102, 87);
   z-index: 1;
-  opacity: .7;
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.5s;
+  overflow: visible;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .menu-drawer-container-inactive {
-  display: none;
+  // display: none;
+  opacity: 0;
+  max-height: 0;
+  background-color: rgba(157, 204, 191, 1);
+  transform: scale(0.8);
+  transition: 0.5s;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .drawer-options-container {
   padding: 10px 10px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
 }
 
 .menu-drawer-option {
   color: #204039;
   font-size: calc(10px + 1vmin);
   font-weight: 500;
-  margin: 5px 2px;
-  padding: 10px 15px;
+  margin: 3px 2px;
+  padding: 5px 15px;
   width: auto;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
+  background-color: $light-green;
   &:hover {
     // background-color: rgba(61, 138, 143, .8);
-    background-color: rgba(33, 64, 57, 1);
-    color: $cream;
-    box-shadow: 0 0 5px 5px #E2E8DD;
+    color: $green;
+    box-shadow: 0 0 5px 5px $green;
     cursor: pointer;
   }
 }
@@ -224,7 +244,8 @@ $dark-green: #204039;
 }
 
 .inactive-project-option {
-  background-color: rgba(61, 128, 113, 0.6);
+  // background-color: rgba(61, 128, 113, 0.6);
+  background-color: rgba(61, 128, 113, .6);
   &:hover {
     background-color: rgba(61, 128, 113, 1);
     color: #E2E8DD;
@@ -368,6 +389,10 @@ $dark-green: #204039;
 
 .about-header {
   margin: 30px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-main {
