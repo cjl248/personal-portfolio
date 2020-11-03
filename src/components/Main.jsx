@@ -7,11 +7,11 @@ export default function Main(props) {
   // console.log('menuActive from Main.jsx', props.menuActive)
   return (
     <div className='app-main'>
-      <MenuDrawerContainer
+      {/*<MenuDrawerContainer
         menuActive={props.menuActive}
         setActivePage={props.setActivePage}
         pages={props.pages}>
-      </MenuDrawerContainer> 
+      </MenuDrawerContainer>*/}
       <DetailContainer
         activePage={props.activePage}>
       </DetailContainer>
