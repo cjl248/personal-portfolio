@@ -2,8 +2,10 @@ $cream: #E2E8DD;
 $light-green: #9DCCC0;
 $green: #3D8071;
 $dark-green: #204039;
-$nice-blue: #1e5e71;
-$nice-blue2: #2c7186;
+$option-green: #165443e0;
+$option-hov-green: #24af90;
+$blue: #1e5e71;
+$blue2: #2c7186;
 
 .app {
   font-size: calc(10px + 2vmin);
@@ -76,59 +78,74 @@ $nice-blue2: #2c7186;
 .menu-drawer-container-active {
   // flex: 0 1 15%;
   position: sticky;
+  background-color: rgb(40, 102, 87);
   left: 0;
   top: 5.5rem;
   height: auto;
   max-height: 100px;
   width: auto;
-  background-color: rgb(40, 102, 87);
+
+  overflow: visible;
   z-index: 1;
   opacity: 1;
-  transform: scale(1);
+  // transform: scale(1);
   transition: 0.5s;
-  overflow: visible;
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 8.5rem;
 }
 
 .menu-drawer-container-inactive {
   // display: none;
+  height: 0;
   opacity: 0;
   max-height: 0;
-  background-color: rgba(157, 204, 191, 1);
-  transform: scale(0.8);
+  background-color: rgb(40, 102, 87);
+  // transform: scale(1);
   transition: 0.5s;
   overflow: hidden;
 
-  display: flex;
+  display: none;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 8.5rem;
 }
 
 .drawer-options-container {
+  background-color: rgb(40, 102, 87);
   padding: 10px 10px;
   display: flex;
   flex-direction: row;
 }
 
 .menu-drawer-option {
-  color: #204039;
-  font-size: calc(10px + 1vmin);
-  font-weight: 500;
-  margin: 3px 2px;
-  padding: 5px 15px;
+  color: $option-green;
+  font-size: calc(12px + 1vmin);
+  font-weight: 600;
+  margin: 0.2rem 0.3rem;
+  padding: 0.3rem 1.0rem;
   width: auto;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
-  background-color: $light-green;
+  background-color: $cream;
   &:hover {
-    // background-color: rgba(61, 138, 143, .8);
-    color: $green;
-    box-shadow: 0 0 5px 5px $green;
+    font-size: calc(12.5px + 1vmin);
+    font-weight: 700;
+    padding: 0.3rem 1.4rem;
+    color: $option-hov-green;
     cursor: pointer;
+    transition: 0.2s;
+    // background-color: rgba(61, 138, 143, .8);
+    // box-shadow: 0 0 5px 5px $dark-green;
+  }
+  &:not(:hover) {
+
+    font-weight: 600;
+    padding: 0.3rem 1.0rem;
+    transition: 0.2s;
   }
 }
 
