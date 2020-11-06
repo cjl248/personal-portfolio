@@ -35,7 +35,7 @@ export default class Projects extends React.Component {
             activeProject={this.state.activeProject}>
           </ProjectsSummary>
           <ProjectsDemo
-            video={this.state.activeProject.links.video}>
+            activeProject={this.state.activeProject}>
           </ProjectsDemo>
         </section>
       </div>

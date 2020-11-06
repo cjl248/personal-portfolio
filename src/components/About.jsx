@@ -1,15 +1,28 @@
 import React from 'react'
 
-export default class Resume extends React.Component {
+export default class About extends React.Component {
 
   state = {
+    name: "",
+    email: "",
+    subject: "",
     text: ""
   }
 
-  handleTyping = (e) => {
-    let text = e.target.value
+  handleInput = (e) => {
     this.setState({
-      text
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(this.state)
+    this.setState({
+      name: "",
+      email: "",
+      subject: "",
+      text: ""
     })
   }
 
@@ -32,21 +45,28 @@ export default class Resume extends React.Component {
               <label className='name-label'>{`Name: `}</label>
               <input
                 required
+                name='name'
+                value={this.state.name}
+                onChange={this.handleInput}
                 className='name-input'
                 type='text'
-                autocomplete="chrome-off">
+                autoComplete="chrome-off">
               </input>
             </span>
             <span className='email-group'>
               <label
+                name='email'
                 className='email-label'
                 type='text'>
                 {`Email: `}
               </label>
               <input
+                name='email'
+                value={this.state.email}
+                onChange={this.handleInput}
                 className='email-input'
                 type='text'
-                autocomplete="chrome-off">
+                autoComplete="chrome-off">
               </input>
             </span>
             <span className='subject-group'>
@@ -56,20 +76,28 @@ export default class Resume extends React.Component {
                 {`Subject: `}
               </label>
               <input
+                name='subject'
+                value={this.state.subject}
+                onChange={this.handleInput}
                 className='subject-input'
                 type='text'
-                autocomplete="chrome-off">
+                autoComplete="chrome-off">
               </input>
             </span>
             <textarea
+              name="text"
+              onChange={this.handleInput}
               className='about-text'
-              onChange={this.handleTyping}
               value={this.state.text}
               rows='6'
               cols='40'
               placeholder="message...">
             </textarea>
-            <button className='about-button'>{`SUBMIT`}</button>
+            <button
+              className='about-button'
+              onClick={this.handleSubmit}>
+              {`SUBMIT`}
+            </button>
           </form>
         </section>
       </div>

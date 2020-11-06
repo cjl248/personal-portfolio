@@ -6,9 +6,19 @@
       "Redesigned a fullstack SPA with fullstack auth and admin dashboard according to client feature specifications"
     ],
     "links": {
-      "frontend": "",
-      "backend": "",
-      "video": ""
+      "frontend": null,
+      "backend": null,
+      "pictures": [
+        "calabria\/cal-main.png",
+        "calabria\/cal-menu.png",
+        "calabria\/cal-catering.png",
+        "calabria\/cal-order.png",
+        "calabria\/cal-social.png",
+        "calabria\/cal-reviews.png",
+        "calabria\/cal-about.png",
+        "calabria\/cal-gallery.png",
+        "calabria\/cal-mail.png"
+      ]
     }
   },
   {
@@ -19,9 +29,14 @@
       "Levered 3 external APIs including the YouTube API to supply immersive, highly customizable content"
     ],
     "links": {
-      "frontend": "", 
-      "backend": "",
-      "video": "https:\/\/player.vimeo.com\/video\/425576035"
+      "frontend": "https:\/\/github.com\/cjl248\/clarity-frontend-react",
+      "backend": "https:\/\/github.com\/cjl248\/clarity-backend-rails-api",
+      "pictures": [
+        "clarity\/clar-home.png",
+        "clarity\/clar-menu.png",
+        "clarity\/clar-meditate.png",
+        "clarity\/clar-journal.png"
+      ]
     }
   },
   {
@@ -31,7 +46,17 @@
       "Designed reusable React components and integrated Semantic UI styling with React Router for scalability",
       "Implemented inversion of control principles in React component hierarchy to reverse data flow, update state, and trigger optimistic re-rendering for an engaging user experience"
     ],
-    "video": ""
+    "links":  {
+      "frontend": "https:\/\/github.com\/Giagnus64\/Bedfellows-Front-End",
+      "backend": "https:\/\/github.com\/Giagnus64\/Bedfellows-API",
+      "pictures": [
+        "bedfellows\/bed-register.png",
+        "bedfellows\/bed-login.png",
+        "bedfellows\/bed-relationships.png",
+        "bedfellows\/bed-dates.png",
+        "bedfellows\/bed-profile.png"
+      ]
+    }
   },
   {
     "name": "Catstagram",
@@ -40,6 +65,15 @@
       "Developed a RESTful Rails API and serialized JSON from a PostgreSQL database to respond tos frontend Fetch API requests",
       "Implemented delegation to apply event bubbling and allow for dynamic DOM manipulation in response to user interaction"
     ],
-    "video": ""
+    "links": {
+      "frontend": "https:\/\/github.com\/janetmndz\/catstagram",
+      "backend": null,
+      "pictures": [
+        "catstagram\/cats-login.png",
+        "catstagram\/cats-add.png",
+        "catstagram\/cats-post.png",
+        "catstagram\/cats-modal.png"
+      ]
+    }
   }
 ]
