@@ -86,7 +86,7 @@ $blue2: #2c7186;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding-left: 8.5rem;
+  padding-left: 11vw;
 
 	// -webkit-animation: slide-bottom 0.5s cubic-bezier(0.950, 0.050, 0.795, 0.035) both;
 	// animation: slide-bottom 0.5s cubic-bezier(0.950, 0.050, 0.795, 0.035) both;
@@ -292,8 +292,8 @@ $blue2: #2c7186;
 }
 
 .projects-video-container {
-  height: 564px;
-  width: 640px;
+  height: auto;
+  width: auto;
   border: 5px solid #3D8071;
   background: #E2E8DD;
   color: black;
@@ -301,8 +301,8 @@ $blue2: #2c7186;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .video-player {
-
+  >.demo-picture {
+    margin: 20px;
   }
 }
 
@@ -438,7 +438,7 @@ button {
   border-radius: 5px;
   box-shadow:  0  0  3px 4px $cream;
   margin: .3rem .2rem;
-  padding: .7rem 1rem;
+  padding: .7rem 2rem;
 }
 
 .about-form {
@@ -524,25 +524,27 @@ button {
 }
 
 .about-text {
+  font-size: 18px;
+  width: 553px;
+  height: 200px;
   margin-top: 10px;
   margin-bottom: 20px;
+  padding: 10px 10px;
   color: $cream;
   font-size: 1.5rem;
   background-color: $dark-green;
-  border-left: none;
-  border-right: none;
-  border-top: 1px $cream solid;
-  border-bottom: 1px $cream solid;
+  box-shadow: 0 0 3px 3px $light-green;
+  border-radius: 3px;
   resize: none;
   &:active,
   &:focus {
-    border-top: 2px seagreen solid;
-    border-bottom: 2px seagreen solid;
+    font-size: 18px;
+    box-shadow: 0 0 3px 3px $cream;
   }
   &::placeholder {
+    font-size: 18px;
     color: $cream;
   }
-
 }
 
 .about-button {
@@ -559,6 +561,7 @@ button {
   border: none;
   border-radius: 5px;
   box-shadow: 0  0  3px 3px $cream;
+  transition: 0.2s;
   &:hover {
     padding: 1px 0 0 0;
     box-shadow: 0  0  3px 2px $cream;
