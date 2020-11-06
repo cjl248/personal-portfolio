@@ -7,9 +7,9 @@ import MenuDrawerContainer from './containers/MenuDrawerContainer.jsx'
 export default class App extends React.Component {
 
   state = {
-    menuActive: true,
+    menuActive: false,
     pages: ['resume', 'projects', 'experience', 'about'],
-    activePage: 'projects',
+    activePage: 'about',
   }
 
   toggleMenu = (active) => {
@@ -36,8 +36,8 @@ export default class App extends React.Component {
         </Header>
         <MenuDrawerContainer
           menuActive={this.state.menuActive}
-          pages={this.state.pages}
-          setActivePage={this.setActivePage}>
+          setActivePage={this.setActivePage}
+          pages={this.state.pages}>
         </MenuDrawerContainer>
         <Main
           menuActive={this.state.menuActive}
