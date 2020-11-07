@@ -35,13 +35,14 @@ export default function Resume() {
       <section className='resume-header'>
         <span>{`Chris Liendo`}</span>
         <span>{`Email: cjl248@cornell.edu | Phone: 646-338-0622 `}</span>
-        <div className='resume-download-wrapper'>
+        <div
+          className='resume-download-wrapper'
+          onClick={handleDownloadClick}>
           <IconContext.Provider value={contextValue}>
             <MdGetApp></MdGetApp>
           </IconContext.Provider>
           <span
-            className='download-text'
-            onClick={handleDownloadClick}>
+            className='download-text'>
           </span>
             {`Download`}
         </div>
