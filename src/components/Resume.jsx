@@ -19,13 +19,10 @@ export default function Resume() {
     const a = document.createElement("a")
     a.style.display = "none"
     document.body.appendChild(a)
-
     const resumePDF = new Blob([resume], {type: 'application/pdf'})
     a.href = window.URL.createObjectURL(resumePDF)
-
     a.setAttribute("download", 'chris-liendo-resume')
     a.click()
-
     window.URL.revokeObjectURL(a.href);
     document.body.removeChild(a);
   }
@@ -34,7 +31,18 @@ export default function Resume() {
     <div className='resume-page-container'>
       <section className='resume-header'>
         <span>{`Chris Liendo`}</span>
-        <span>{`Email: cjl248@cornell.edu | Phone: 646-338-0622 `}</span>
+        <span className='about-contact-line'>
+          {`Email:`}
+        <a
+          href={`mailto:cjl248@cornell.edu`}>
+          {`cjl248@cornell.edu`}
+        </a>
+        {`| Phone:`}
+        <a
+          href={`tel:+1646-338-0622`}>
+          {`646-338-0622`}
+        </a>
+        </span>
         <div
           className='resume-download-wrapper'
           onClick={handleDownloadClick}>
