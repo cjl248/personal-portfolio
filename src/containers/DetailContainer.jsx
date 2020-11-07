@@ -4,9 +4,10 @@ import About from '../components/About.jsx'
 import Projects from '../components/Projects.jsx'
 import Experience from '../components/Experience.jsx'
 
-let projectList = require('../data/projects.json')
 
 export default function DetailContainer(props) {
+  
+  const projectList = require('../data/projects.json')
 
   const detailComponents = {
     resume: <Resume></Resume>,

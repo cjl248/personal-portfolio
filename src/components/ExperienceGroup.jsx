@@ -30,7 +30,7 @@ export default class ExperienceGroup extends React.Component {
   }
 
   render () {
-    const {name, position, start, end, experience} = this.props.experience
+    const {name, position, start, end} = this.props.experience
     return (
       <div className='hover-wrapper'>
         <div className={this.toggleBlockStyling()}></div>

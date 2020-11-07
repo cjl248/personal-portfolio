@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.scss'
 import Header from './components/Header.jsx'
+import FooterContainer from './containers/FooterContainer.jsx'
 import Main from './components/Main.jsx'
 import MenuDrawerContainer from './containers/MenuDrawerContainer.jsx'
 
@@ -9,7 +10,7 @@ export default class App extends React.Component {
   state = {
     menuActive: false,
     pages: ['resume', 'projects', 'experience', 'about'],
-    activePage: 'projects',
+    activePage: 'about',
   }
 
   toggleMenu = (active) => {
@@ -45,8 +46,8 @@ export default class App extends React.Component {
           setActivePage={this.setActivePage}
           activePage={this.state.activePage}>
         </Main>
+        <FooterContainer></FooterContainer>
       </div>
     )
   }
-
 }
