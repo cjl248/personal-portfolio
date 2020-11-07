@@ -7,13 +7,13 @@ export default function ProjectsDemo(props) {
   const renderPictures = () => {
     if (!pictures) return
     return pictures.map((picture, index) => {
-      const path = `../assets/project_pics/${picture}`
       return (
         <img
           src={require(`../assets/project_pics/${picture}`)}
           className="demo-picture"
           height={450}
           width={700}
+          alt={""}
           key={index}>
         </img>
       )

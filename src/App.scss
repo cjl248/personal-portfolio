@@ -25,7 +25,7 @@ $blue2: #2c7186;
   flex-direction: row;
   align-items: center;
   z-index: 2;
-  /* min-width: 650px; */
+  box-shadow: 0 1px 5px 5px $green;
 }
 
 .menu-button {
@@ -64,6 +64,57 @@ $blue2: #2c7186;
   margin: 0 5px;
 }
 
+// FOOTER CONTAINER //
+
+.footer-container {
+  position: sticky;
+  bottom: 0;
+  background-color: $green;
+  color: $cream;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height : 60px;
+  box-shadow: 0 -1px 5px 5px $green;
+}
+
+.footer-container>span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 2.5px;
+  >p, a {
+    display: inline;
+    position: relative;
+    bottom: 5px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+}
+
+a.footer-linkedin-anchor {
+  margin: 0 10px;
+}
+img.atom-logo {
+  position: relative;
+  bottom: 5px;
+  margin: 0 5px;
+}
+
+img.javascript-logo,
+img.react-logo,
+img.sass-logo {
+  position: relative;
+  bottom: 5px;
+  margin: 0 10px;
+}
+
+// APP MAIN //
+
 .app-main {
   // background-color: #204039;
   background-color: $dark-green;
@@ -74,6 +125,8 @@ $blue2: #2c7186;
   align-items: flex-start;
   width: auto;
 }
+
+// MENU DRAWER //
 
 .menu-drawer-container-active {
   position: sticky;
@@ -87,6 +140,7 @@ $blue2: #2c7186;
   flex-direction: row;
   justify-content: flex-start;
   padding-left: 11vw;
+  box-shadow: 0 1px 5px 5px #286657
 
 	// -webkit-animation: slide-bottom 0.5s cubic-bezier(0.950, 0.050, 0.795, 0.035) both;
 	// animation: slide-bottom 0.5s cubic-bezier(0.950, 0.050, 0.795, 0.035) both;
@@ -111,7 +165,7 @@ $blue2: #2c7186;
 
 .drawer-options-container {
   background-color: rgb(40, 102, 87);
-  padding: 10px 10px;
+  padding: 15px 10px 5px 10px;
   display: flex;
   flex-direction: row;
 }
@@ -410,8 +464,8 @@ $blue2: #2c7186;
 }
 
 .about-main {
-  font-size: 1.5rem;
-  margin: 0px 20px;
+  font-size: 1.4rem;
+  margin: 0px 20px 20px 20px;
 }
 
 // ABOUT FORM //
