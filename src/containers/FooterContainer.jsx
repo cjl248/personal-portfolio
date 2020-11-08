@@ -53,7 +53,8 @@ export default function FooterContainer() {
   return (
     <section className='footer-container'>
       <span>
-        <p>{`Made with ❤️ by`}</p>
+        <p className='large-size'>{`Made with ❤️ by`}</p>
+        <p className='small-size'>{`By`}</p>
         <a
           href={`https://www.linkedin.com/in/chris-liendo/`}
           className='footer-linkedin-anchor'>

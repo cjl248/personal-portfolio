@@ -32,12 +32,12 @@ export default function Resume() {
       <section className='resume-header'>
         <span>{`Chris Liendo`}</span>
         <span className='about-contact-line'>
-          {`Email:`}
+          {`| Email |`}
         <a
           href={`mailto:cjl248@cornell.edu`}>
           {`cjl248@cornell.edu`}
         </a>
-        {`| Phone:`}
+        {`| Phone |`}
         <a
           href={`tel:+1646-338-0622`}>
           {`646-338-0622`}
