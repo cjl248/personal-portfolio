@@ -62,16 +62,16 @@ $option-hov-green: #24af90;
   .title-sub {
     font-size: calc(8px + 1.5vmin);
     font-weight: 500;
+    padding-right: 35px;
   }
 
   .social-media-container {
-    transform: scale(.45);
+    transform: scale(.35);
     position: absolute;
-    top: 30%;
-    left: 62.5%;
+    left: 87.5%;
     display: inline-flex;
     flex: 0 0 0%;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
   }
@@ -510,20 +510,20 @@ $option-hov-green: #24af90;
   textarea,
   button {
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    -moz-osx-font-smoothing: antialiased;
 
+    // -webkit-touch-callout: none;
+    // -webkit-user-select: none;
+    // -khtml-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    // user-select: none;
     &:focus {
       outline: none;
     }
   }
 
-  .about-form-wrapper {
+    .about-form-wrapper {
     width: 70vw;
     border-radius: 5px;
     box-shadow:  0  0  2px 3px $cream;
@@ -558,10 +558,10 @@ $option-hov-green: #24af90;
       }
       >input{
         font-family: 'Roboto Slab', sans-serif;
-        font-weight: 500;
+        font-weight: 400;
         background-color: $dark-green;
         color: $cream;
-        font-size: calc(8px + 2vmin);
+        font-size: calc(8px + 1.75vmin);
         align-self: flex-end;
         height: 1rem;
         width: 35vw;
@@ -625,6 +625,7 @@ $option-hov-green: #24af90;
     font-size: calc(8px + 1vmin);
     background-color: $dark-green;
     box-shadow: 0 0 2px 1px $light-green;
+    border: none;
     border-radius: 3px;
     resize: none;
     &:active,
