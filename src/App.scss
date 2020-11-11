@@ -585,36 +585,6 @@ $option-hov-green: #24af90;
     margin-bottom: 5px;
   }
 
-  .name-group {
-
-    >.name-label {
-
-    }
-    >.name-input  {
-
-    }
-  }
-
-  .email-group {
-
-    >.email-label {
-
-    }
-    >.email-input  {
-
-    }
-  }
-
-  .subject-group {
-
-    >.subject-label {
-
-    }
-    >.subject-input  {
-
-    }
-  }
-
   .about-text {
     width: 64vw;
     height: 150px;
@@ -628,8 +598,11 @@ $option-hov-green: #24af90;
     border: none;
     border-radius: 3px;
     resize: none;
+    &:not(:active),
     &:active,
+    &:not(:focus)
     &:focus {
+      font-size: calc(8px + 1vmin);
       box-shadow: 0 0 2px 1px $cream;
     }
     &::placeholder {
@@ -1244,36 +1217,6 @@ $option-hov-green: #24af90;
     margin-bottom: 5px;
   }
 
-  .name-group {
-
-    >.name-label {
-
-    }
-    >.name-input  {
-
-    }
-  }
-
-  .email-group {
-
-    >.email-label {
-
-    }
-    >.email-input  {
-
-    }
-  }
-
-  .subject-group {
-
-    >.subject-label {
-
-    }
-    >.subject-input  {
-
-    }
-  }
-
   .about-text {
     font-size: 18px;
     width: 553px;
@@ -1288,7 +1231,9 @@ $option-hov-green: #24af90;
     border-radius: 3px;
     resize: none;
     &:active,
-    &:focus {
+    &:not(:active),
+    &:focus,
+    &:not(:focus) {
       font-size: 18px;
       box-shadow: 0 0 3px 3px $cream;
     }

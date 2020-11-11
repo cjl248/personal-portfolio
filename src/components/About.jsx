@@ -15,14 +15,37 @@ export default class About extends React.Component {
     })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
-    this.setState({
-      name: "",
-      email: "",
-      subject: "",
-      text: ""
-    })
+    const config = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: this.state.name,
+        email: this.state.email,
+        subject: this.state.subject,
+        text: this.state.text,
+      })
+    }
+    const response = await fetch("http://localhost:3000/form_mail", config)
+    const responseData = await response.json()
+    if (responseData.status === 202) {
+      alert("Message sent successfully!")
+      console.log(responseData)
+      // this.setState({
+      //   name: "",
+      //   email: "",
+      //   subject: "",
+      //   text: ""
+      // })
+    } else if (responseData.status === 422) {
+      alert("422: Unprocessable Entity...response data in the console log.")
+      console.log(responseData)
+    } else {
+      alert("500: Server Error")
+    }
   }
 
   render() {
