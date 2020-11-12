@@ -1,5 +1,7 @@
 import React from 'react'
 
+const apiURL = "https://personal-portfolio-mailer.herokuapp.com/"
+
 export default class About extends React.Component {
 
   state = {
@@ -30,7 +32,7 @@ export default class About extends React.Component {
         text: this.state.text,
       })
     }
-    const response = await fetch(`/form_mail`, config)
+    const response = await fetch(`${apiURL}/form_mail`, config)
     const responseData = await response.json()
     if (responseData.status === 202) {
       alert("Message sent successfully!")
