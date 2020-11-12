@@ -1,5 +1,7 @@
 import React from 'react'
 
+const apiURL = "https://personal-portfolio-mailer.herokuapp.com/"
+
 export default class About extends React.Component {
 
   state = {
@@ -20,7 +22,8 @@ export default class About extends React.Component {
     const config = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         name: this.state.name,
@@ -29,20 +32,18 @@ export default class About extends React.Component {
         text: this.state.text,
       })
     }
-    const response = await fetch("http://localhost:3000/form_mail", config)
+    const response = await fetch(`${apiURL}/form_mail`, config)
     const responseData = await response.json()
     if (responseData.status === 202) {
       alert("Message sent successfully!")
-      console.log(responseData)
-      // this.setState({
-      //   name: "",
-      //   email: "",
-      //   subject: "",
-      //   text: ""
-      // })
+      this.setState({
+        name: "",
+        email: "",
+        subject: "",
+        text: ""
+      })
     } else if (responseData.status === 422) {
       alert("422: Unprocessable Entity...response data in the console log.")
-      console.log(responseData)
     } else {
       alert("500: Server Error")
     }
