@@ -241,6 +241,13 @@ $option-hov-green: #24af90;
     align-items: center;
   }
 
+  a.resume-blob {
+    display: none;
+    border: none;
+    height: 0;
+    width: 0;
+  }
+
   .resume-header {
     padding: 25px 0;
     display: flex;
