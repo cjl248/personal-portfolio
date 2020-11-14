@@ -8,6 +8,8 @@ import { MdGetApp } from 'react-icons/md'
 const PDF_CDN = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 pdfjs.GlobalWorkerOptions.workerSrc = PDF_CDN
 
+const apiURL = "https://personal-portfolio-mailer.herokuapp.com"
+
 export default function Resume() {
 
   const contextValue = {
@@ -16,15 +18,32 @@ export default function Resume() {
   }
 
   const handleDownloadClick = () => {
-    const a = document.createElement("a")
-    a.style.display = "none"
-    document.body.appendChild(a)
-    const resumePDF = new Blob([resume], {type: 'application/pdf'})
-    a.href = window.URL.createObjectURL(resumePDF)
-    a.setAttribute("download", 'chris-liendo-resume')
-    a.click()
-    window.URL.revokeObjectURL(a.href);
-    document.body.removeChild(a);
+    const config = {
+      method: "GET",
+      headers: {
+        "Accept": "application/pdf",
+        "Content-Type": "application/json"
+
+      }
+    }
+
+    fetch(`${apiURL}/resume.pdf`, config)
+      .then(stream => stream.blob())
+      .then(blob => {
+        // Create anchor element to point to pdf
+        const a = document.createElement("a")
+        a.style.display = "none"
+        document.body.appendChild(a)
+        // Create PDF file object
+        a.href = window.URL.createObjectURL(blob)
+        // Simulate click on anchor
+        a.setAttribute("download", 'chris-liendo-resume.pdf')
+        a.click()
+        // Clean up; get rid of anchor
+        window.URL.revokeObjectURL(a.href)
+        document.body.removeChild(a)
+      })
+
   }
 
   return(
@@ -33,15 +52,9 @@ export default function Resume() {
         <span>{`Chris Liendo`}</span>
         <span className='about-contact-line'>
           {`| Email |`}
-        <a
-          href={`mailto:cjl248@cornell.edu`}>
-          {`cjl248@cornell.edu`}
-        </a>
-        {`| Phone |`}
-        <a
-          href={`tel:+1646-338-0622`}>
-          {`646-338-0622`}
-        </a>
+          <a href={`mailto:cjl248@cornell.edu`}>{`cjl248@cornell.edu`}</a>
+          {`| Phone |`}
+          <a href={`tel:+1646-338-0622`}>{`646-338-0622`}</a>
         </span>
         <div
           className='resume-download-wrapper'
