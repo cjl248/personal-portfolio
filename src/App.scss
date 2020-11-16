@@ -592,6 +592,15 @@ $option-hov-green: #24af90;
     margin-bottom: 5px;
   }
 
+  .about-form-message {
+    font-size: calc(8px + 1vmin);
+    border-top: 1px double $cream;
+    border-bottom: 1px double $cream;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
   .about-text {
     width: 64vw;
     height: 150px;
@@ -1226,10 +1235,12 @@ $option-hov-green: #24af90;
 
   .about-form-message {
     font-size: 1.2rem;
-    border: none;
+    border-top: 1px double $cream;
+    border-bottom: 1px double $cream;
     justify-content: center;
     font-weight: 600;
-    padding-bottom: 5px;
+    margin-bottom: 5px;
+    padding: 5px 0;
   }
 
   .about-text {
