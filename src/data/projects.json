@@ -8,6 +8,7 @@
     "links": {
       "frontend": null,
       "backend": null,
+      "live": "https:\/\/www.calabriapizzaoradell.com",
       "pictures": [
         "calabria\/cal-main.png",
         "calabria\/cal-menu.png",
@@ -31,6 +32,7 @@
     "links": {
       "frontend": "https:\/\/github.com\/cjl248\/clarity-frontend-react",
       "backend": "https:\/\/github.com\/cjl248\/clarity-backend-rails-api",
+      "live": null,
       "pictures": [
         "clarity\/clar-home.png",
         "clarity\/clar-menu.png",
@@ -49,6 +51,7 @@
     "links":  {
       "frontend": "https:\/\/github.com\/Giagnus64\/Bedfellows-Front-End",
       "backend": "https:\/\/github.com\/Giagnus64\/Bedfellows-API",
+      "live": null,
       "pictures": [
         "bedfellows\/bed-register.png",
         "bedfellows\/bed-login.png",
@@ -68,6 +71,7 @@
     "links": {
       "frontend": "https:\/\/github.com\/janetmndz\/catstagram",
       "backend": null,
+      "live": null,
       "pictures": [
         "catstagram\/cats-login.png",
         "catstagram\/cats-add.png",

@@ -101,7 +101,7 @@ export default class About extends React.Component {
 
           <p>{`I discovered web development as an undergrad but truly became passionate about it while working as a technical recruiter. Many personal projects and technical meetups later, I committed to a career change. As a recent graduate of Flatiron School’s Software Engineering Immersive, I am currently fully focused on launching my career as a full stack web developer.`}</p>
 
-          <p>{`I love to ski and snowboard in the winter, kayak and hike in the summer and play soccer and tennis year round.`}</p>
+          <p>{`Pastimes include skiing and snowboarding in the winter, kayaking and hiking in the summer and playing soccer and tennis year round. Other interests include the crossroads of meditation, mindfulness, psychology, neurology and spirituality. Some of my favorite authors are Ken Wilber, Alan Watts, Eckhart Tolle, and Daniel J. Siegel.`}</p>
 
           <p>{`You can find more information and download a copy of an updated resume on the resume page! Or if you'd like to get in contact, you can use the form below!`}</p>
         </section>
