@@ -593,12 +593,26 @@ $option-hov-green: #24af90;
   }
 
   .about-form-message {
+    display: inline-flex;
+    flex-direction: row;
     font-size: calc(8px + 1vmin);
     border-top: 1px double $cream;
     border-bottom: 1px double $cream;
     justify-content: center;
     font-weight: 600;
     margin-bottom: 5px;
+  }
+
+  img.about-message-loading {
+    width: 15px;
+    height: 15px;
+    padding: 2.5px 0 1.5px 2.5px;
+  }
+
+  img.not-loading {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   .about-text {
@@ -1234,13 +1248,27 @@ $option-hov-green: #24af90;
   }
 
   .about-form-message {
+    width: auto;
+    display: inline-flex;
+    flex-direction: row;
     font-size: 1.2rem;
-    border-top: 1px double $cream;
-    border-bottom: 1px double $cream;
-    justify-content: center;
+    border-top: 1px double #E2E8DD;
+    border-bottom: 1px double #E2E8DD;
+    justify-content: space-evenly;
+    align-items: center;
     font-weight: 600;
     margin-bottom: 5px;
     padding: 5px 0;
+  }
+
+  img.about-message-loading {
+    padding: 0 10px;
+  }
+
+  img.not-loading {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   .about-text {

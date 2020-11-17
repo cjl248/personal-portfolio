@@ -10,6 +10,7 @@ export default class About extends React.Component {
     subject: "",
     text: "",
     formMessage: "",
+    isSending: false
   }
 
   handleInput = (e) => {
@@ -22,7 +23,8 @@ export default class About extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault()
     this.setState({
-      formMessage: "Sending your message..."
+      formMessage: "Sending your message...",
+      isSending: true
     })
     const config = {
       method: "POST",
@@ -48,7 +50,8 @@ export default class About extends React.Component {
           email: "",
           subject: "",
           text: "",
-          formMessage: "Message sent successfully!"
+          formMessage: "Message sent successfully!",
+          isSending: false
         })
       } else if (responseData.status === 422) {
         alert("422: your message could not be sent")
@@ -57,16 +60,32 @@ export default class About extends React.Component {
       }
     } else { // END => check name !empty
       this.setState({
-        formMessage: "Name is required!"
+        formMessage: "Name is required!",
+        isSending: false
       })
     }
 
   }
 
+  loadingClasses = () => {
+    if (this.state.isSending) return 'about-message-loading'
+    else return 'not-loading'
+  }
+
   renderMessages = () => {
     if (!this.state.formMessage) return
     return (
-      <div className='about-form-message'>{this.state.formMessage}</div>
+
+      <div className='about-form-message'>
+        {this.state.formMessage}
+        <img
+          className={this.loadingClasses()}
+          src={require("../assets/loading.gif")}
+          alt={`sending message...`}
+          width={20}
+          height={20}>
+        </img>
+      </div>
     )
   }
 
