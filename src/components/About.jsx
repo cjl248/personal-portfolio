@@ -8,17 +8,24 @@ export default class About extends React.Component {
     name: "",
     email: "",
     subject: "",
-    text: ""
+    text: "",
+    formMessage: "",
+    isSending: false
   }
 
   handleInput = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
+      formMessage: "",
     })
   }
 
   handleSubmit = async (e) => {
     e.preventDefault()
+    this.setState({
+      formMessage: "Sending your message...",
+      isSending: true
+    })
     const config = {
       method: "POST",
       headers: {
@@ -32,21 +39,54 @@ export default class About extends React.Component {
         text: this.state.text,
       })
     }
-    const response = await fetch(`${apiURL}/form_mail`, config)
-    const responseData = await response.json()
-    if (responseData.status === 202) {
-      alert("Message sent successfully!")
+
+    if (this.state.name !== "") { // START => check name !empty
+      const response = await fetch(`${apiURL}/form_mail`, config)
+      const responseData = await response.json()
+      if (responseData.status === 202) {
+        // alert("Message sent successfully!")
+        this.setState({
+          name: "",
+          email: "",
+          subject: "",
+          text: "",
+          formMessage: "Message sent successfully!",
+          isSending: false
+        })
+      } else if (responseData.status === 422) {
+        alert("422: your message could not be sent")
+      } else {
+        alert("500: Server Error")
+      }
+    } else { // END => check name !empty
       this.setState({
-        name: "",
-        email: "",
-        subject: "",
-        text: ""
+        formMessage: "Name is required!",
+        isSending: false
       })
-    } else if (responseData.status === 422) {
-      alert("422: Unprocessable Entity...response data in the console log.")
-    } else {
-      alert("500: Server Error")
     }
+
+  }
+
+  loadingClasses = () => {
+    if (this.state.isSending) return 'about-message-loading'
+    else return 'not-loading'
+  }
+
+  renderMessages = () => {
+    if (!this.state.formMessage) return
+    return (
+
+      <div className='about-form-message'>
+        {this.state.formMessage}
+        <img
+          className={this.loadingClasses()}
+          src={require("../assets/loading.gif")}
+          alt={`sending message...`}
+          width={20}
+          height={20}>
+        </img>
+      </div>
+    )
   }
 
   render() {
@@ -68,6 +108,7 @@ export default class About extends React.Component {
         <section className='about-form-wrapper'>
           <form className='about-form'>
             <label className='contact-label'>{`CONTACT CHRIS: `}</label>
+            {this.renderMessages()}
             <span className='name-group'>
               <label className='name-label'>{`Name: `}</label>
               <input
