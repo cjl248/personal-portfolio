@@ -14,21 +14,21 @@ export default function ProjectsSummary(props) {
     if (links.live) {
       return (
         <span className='summary-links'>
-          <a href={links.live}>{`Production`}</a>
+          <a target='_blank' rel="noopener noreferrer" href={links.live}>{`Production`}</a>
         </span>
       )
     } else if (links.frontend && links.backend) {
       return (
         <span className='summary-links'>
-          <a href={links.frontend}>{`Frontend`}</a>
+          <a target='_blank' href={links.frontend} rel="noopener noreferrer">{`Frontend`}</a>
           {` | `}
-          <a href={links.backend}>{`Backend`}</a>
+          <a target='_blank' href={links.backend} rel="noopener noreferrer">{`Backend`}</a>
         </span>
       )
     } else if (links.frontend && !links.backend) {
       return (
         <span className='summary-links'>
-          <a href={links.frontend}>{`Repository`}</a>
+          <a target='_blank' href={links.frontend} rel="noopener noreferrer">{`Repository`}</a>
         </span>
       )
     }
@@ -43,9 +43,6 @@ export default function ProjectsSummary(props) {
       <div className='summary-tech'>
         {`Tech Stack: ${props.activeProject.tech}`}
       </div>
-      {/*<span className='summary-links'>
-        {renderLinks()}
-      </span>*/}
       <ul className='summary-bullets'>
         {renderBullets()}
       </ul>
