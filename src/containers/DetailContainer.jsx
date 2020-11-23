@@ -4,10 +4,10 @@ import About from '../components/About.jsx'
 import Projects from '../components/Projects.jsx'
 import Experience from '../components/Experience.jsx'
 import NotFound from '../components/NotFound.jsx'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 
-export default function DetailContainer(props) {
-
+function DetailContainer(props) {
+  let history = props.history
   const projectList = require('../data/projects.json')
 
   const detailComponents = {
@@ -17,10 +17,19 @@ export default function DetailContainer(props) {
     experience: <Route exact path='/experience' component={Experience}></Route>
   }
 
+  const renderDetailComponents = () => {
+    if (history.action.toString() === 'PUSH') {
+      return detailComponents[props.activePage]
+    } else if (history.action.toString() === 'POP'){
+      const activeComponent = history.location.pathname.slice(1)
+      return detailComponents[activeComponent]
+    }
+  }
+
   return (
     <div className='detail-container'>
       <Switch>
-        {detailComponents[props.activePage]}
+        {renderDetailComponents()}
         <Route exact path='' component={About}></Route>
         <Route component={NotFound}></Route>
       </Switch>
@@ -28,3 +37,5 @@ export default function DetailContainer(props) {
   )
 
 }
+
+export default withRouter(DetailContainer)

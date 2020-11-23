@@ -6,6 +6,7 @@ export default function Main(props) {
   return (
     <div className='app-main'>
       <DetailContainer
+        setActivePage={props.setActivePage}
         activePage={props.activePage}>
       </DetailContainer>
     </div>
