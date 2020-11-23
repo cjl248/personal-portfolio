@@ -1,5 +1,6 @@
 import React from 'react'
 import MenuDrawerOption from '../components/MenuDrawerOption.jsx'
+import { Link } from 'react-router-dom'
 
 export default function MenuDrawerContainer(props) {
 
@@ -11,11 +12,14 @@ export default function MenuDrawerContainer(props) {
     if (!props.pages) return
     return props.pages.map((page, index) => {
       return (
-        <MenuDrawerOption
-          key={index}
-          page={page}
-          setActivePage={props.setActivePage}>
-        </MenuDrawerOption>)
+        <Link className='option-link' to={`/${page}`}>
+          <MenuDrawerOption
+            key={index}
+            page={page}
+            setActivePage={props.setActivePage}>
+          </MenuDrawerOption>
+        </Link>
+      )
     })
   }
 
