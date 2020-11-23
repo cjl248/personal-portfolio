@@ -12,7 +12,7 @@ export default function MenuDrawerContainer(props) {
     if (!props.pages) return
     return props.pages.map((page, index) => {
       return (
-        <Link className='option-link' to={`/${page}`}>
+        <Link className='option-link' to={`/${page}`} key={index}>
           <MenuDrawerOption
             key={index}
             page={page}
