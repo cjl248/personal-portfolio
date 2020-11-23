@@ -14,7 +14,7 @@ export default function ProjectsSummary(props) {
     if (links.live) {
       return (
         <span className='summary-links'>
-          <a target='_blank' rel="noopener noreferrer" href={links.live}>{`Production`}</a>
+          <a target='_blank' rel="noopener noreferrer" href={links.live}>{`Live`}</a>
         </span>
       )
     } else if (links.frontend && links.backend) {

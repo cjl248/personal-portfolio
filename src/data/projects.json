@@ -1,9 +1,10 @@
 [
   {
     "name": "Calabria Pizza",
-    "tech": "JavaScript, React, Ruby, Rails, bcrypt, JWT, Custom Sass",
+    "tech": "JavaScript, React, Ruby, Rails, ActionMailer, Devise, JWT, Custom Sass",
     "description": [
-      "Redesigned a fullstack SPA with fullstack auth and admin dashboard according to client feature specifications"
+      "Redesigned a fullstack SPA with fullstack auth and admin dashboard according to client feature specifications",
+      "Newsletter email subscription with Rails ActionMailer and Devise checks for valid non-duplicate emails and provides confirmation and the option to unsubscribe if desired"
     ],
     "links": {
       "frontend": null,
