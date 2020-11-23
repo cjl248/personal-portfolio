@@ -7,7 +7,7 @@ import NotFound from '../components/NotFound.jsx'
 import { Switch, Route, withRouter } from 'react-router-dom'
 
 function DetailContainer(props) {
-  let history = props.history
+
   const projectList = require('../data/projects.json')
 
   const detailComponents = {
@@ -18,6 +18,7 @@ function DetailContainer(props) {
   }
 
   const renderDetailComponents = () => {
+    let history = props.history
     if (history.action.toString() === 'PUSH') {
       return detailComponents[props.activePage]
     } else if (history.action.toString() === 'POP'){
