@@ -66,7 +66,7 @@
     "name": "Catstagram",
     "tech": "JavaScript-ES6, JSON, AJAX, Rails API, PostgreSQL",
     "description": [
-      "Developed a RESTful Rails API and serialized JSON from a PostgreSQL database to respond tos frontend Fetch API requests",
+      "Developed a RESTful Rails API and serialized JSON from a PostgreSQL database to respond to frontend Fetch API requests",
       "Implemented delegation to apply event bubbling and allow for dynamic DOM manipulation in response to user interaction"
     ],
     "links": {
