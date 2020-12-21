@@ -107,7 +107,7 @@ export default class About extends React.Component {
         </section>
         <section className='about-form-wrapper'>
           <form className='about-form'>
-            <label className='contact-label'>{`CONTACT CHRIS: `}</label>
+            <label className='contact-label'>{`Send Chris a message: `}</label>
             {this.renderMessages()}
             <span className='name-group'>
               <label className='name-label'>{`Name: `}</label>
