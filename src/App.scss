@@ -475,32 +475,35 @@ $option-hov-green: #24af90;
     align-items: center;
     &:hover {
       > .hover-block {
-        animation: grow-vert .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        height: 75px;
+        height: 30px;
         box-shadow: 0 0 10px 7.5px $green;
       }
       color: #E2E8DD;
       -webkit-animation: slide-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  	  animation: slide-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  	          animation: slide-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     &:not(:hover) {
       -webkit-animation: slide-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  	  animation: slide-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  	          animation: slide-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
-  }
-
-  .active-hover-block {
-    &:not(:hover) {
-      height: 200px!important;
-    }
-    box-shadow: 0 0 10px 7.5px $green;
   }
 
   .hover-block {
     height: 30px;
     width: 3px;
     background-color: #E2E8DD;
+    &:not(:hover) {
+      animation: shrink-vert .20s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
   }
+
+  .active-hover-block {
+    box-shadow: 0 0 10px 7.5px $green;
+    &:not(:hover) {
+      animation: grow-vert .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+  }
+
 
   .exp-project-group {
     width: 70vw;
