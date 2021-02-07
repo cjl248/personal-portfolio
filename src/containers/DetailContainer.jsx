@@ -31,7 +31,12 @@ function DetailContainer(props) {
     <div className='detail-container'>
       <Switch>
         {renderDetailComponents()}
-        <Route exact path='' component={About}></Route>
+        {/*<Route exact path='' component={Projects}></Route>*/}
+        <Route
+          exact
+          path=''
+          render={() => {return <Projects projectList={projectList} />}}>
+        </Route>
         <Route component={NotFound}></Route>
       </Switch>
     </div>
