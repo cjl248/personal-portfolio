@@ -42,10 +42,4 @@ export default class Projects extends React.Component {
     )
   }
 
-  // componentDidMount() {
-  //   this.setState({
-  //     activeProject: this.findActive()
-  //   })
-  // }
-
 }

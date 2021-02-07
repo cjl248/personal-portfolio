@@ -31,7 +31,6 @@ function DetailContainer(props) {
     <div className='detail-container'>
       <Switch>
         {renderDetailComponents()}
-        {/*<Route exact path='' component={Projects}></Route>*/}
         <Route
           exact
           path=''
