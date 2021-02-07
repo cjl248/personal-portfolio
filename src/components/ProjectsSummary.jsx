@@ -28,7 +28,7 @@ export default function ProjectsSummary(props) {
     } else if (links.frontend && !links.backend) {
       return (
         <span className='summary-links'>
-          <a target='_blank' href={links.frontend} rel="noopener noreferrer">{`Repository`}</a>
+          <a target='_blank' href={links.frontend} rel="noopener noreferrer">{`GitHub`}</a>
         </span>
       )
     }
