@@ -13,7 +13,7 @@ export default function ProjectsDemo(props) {
           className="demo-picture"
           height={450}
           width={700}
-          alt={""}
+          alt={picture}
           key={index}>
         </img>
       )
