@@ -1,5 +1,26 @@
 [
   {
+    "name": "PorfolioBase",
+    "tech": "JavaScript, React, Material-UI, Ruby, Rails API, Coinbase API & WSS",
+    "description": [
+      "A fullstack web app that uses market data to calculate indicators such as Bollinger Bands and Fibonacci Retracement and execute market and limit orders through the Coinbase API",
+      "Provides live cyryptocurrency prices through Coinbase WSS as well as portfolio component values and percentages"
+    ],
+    "links": {
+      "frontend": null,
+      "backend": null,
+      "live": "https:\/\/cjl248.github.io/coinbase-algo-trading",
+      "pictures": [
+        "portfoliobase\/home.png",
+        "portfoliobase\/portfolio.png",
+        "portfoliobase\/prices.png",
+        "portfoliobase\/bollinger.png",
+        "portfoliobase\/fibonacci.png",
+        "portfoliobase\/orders.png"
+      ]
+    }
+  },
+  {
     "name": "Calabria Pizza",
     "tech": "JavaScript, React, Ruby, Rails, ActionMailer, Devise, JWT, Custom Sass",
     "description": [
