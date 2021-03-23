@@ -1,9 +1,9 @@
 [
   {
     "name": "PorfolioBase",
-    "tech": "JavaScript, Rails, Material-UI, Ruby, Rails, Coinbase API & WSS",
+    "tech": "JavaScript, React, Material-UI, Ruby, Rails API, Coinbase API & WSS",
     "description": [
-      "A full stack web app that uses market data to calculate indicators such as Bollinger Bands and Fibonacci Retracement and execute market and limit orders through the Coinbase API",
+      "A fullstack web app that uses market data to calculate indicators such as Bollinger Bands and Fibonacci Retracement and execute market and limit orders through the Coinbase API",
       "Provides live cyryptocurrency prices through Coinbase WSS as well as portfolio component values and percentages"
     ],
     "links": {
